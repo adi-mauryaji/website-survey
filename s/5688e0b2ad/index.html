@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abgleich: Zahlungen automatisch den offenen Rechnungen zuordnen</title>
+  <meta name="description" content="Abgleich vergleicht Ihre Bankumsätze mit Ihren offenen Rechnungen, ordnet eindeutige Zahlungen automatisch zu, markiert Abweichungen zur Prüfung und exportiert nach DATEV. 14 Tage kostenlos testen, ohne Kreditkarte.">
+  <meta name="theme-color" content="#F3F6F3">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/fira-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fira-sans-condensed-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="Abgleich, zum Seitenanfang">
+        <svg class="wordmark-mark" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+          <circle cx="3" cy="4" r="2.5"/>
+          <circle cx="25" cy="16" r="2.5"/>
+          <path d="M5.5 4C15 4 13 16 22.5 16"/>
+        </svg>
+        <span>Abgleich</span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="#ablauf">Ablauf</a>
+        <a href="#preise">Preise</a>
+        <a href="#datenschutz">Datenschutz</a>
+      </nav>
+      <!-- Demo-Anfrage: öffnet eine vorbereitete E-Mail an den Vertrieb. -->
+      <a class="btn btn-outline btn-small" href="mailto:vertrieb@abgleich.example?subject=Demo%20von%20Abgleich%20anfragen&amp;body=Guten%20Tag%2C%0A%0Awir%20m%C3%B6chten%20Abgleich%20in%20einer%20Demo%20sehen.%0A%0AUnternehmen%3A%0AName%3A%0ATelefon%3A%0AAnzahl%20Nutzer%3A%0AWunschtermine%3A%0A">Demo anfragen</a>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <h1 id="hero-title" class="hero-title">
+          <span>Zahlungen automatisch zuordnen.</span>
+          <span>Abweichungen selbst prüfen.</span>
+        </h1>
+
+        <div class="hero-intro">
+          <p class="lead">Abgleich vergleicht Ihre Bankumsätze mit Ihren offenen Rechnungen. Eindeutige Zahlungen werden automatisch zugeordnet, Abweichungen zur Prüfung markiert. Das Ergebnis exportieren Sie nach DATEV.</p>
+          <div class="hero-actions">
+            <div class="actions">
+              <!-- PLATZHALTER: Registrierungs-URL für den Testzugang -->
+              <a class="btn btn-primary" href="https://app.abgleich.example/registrieren">14 Tage kostenlos testen</a>
+              <a class="btn btn-outline" href="mailto:vertrieb@abgleich.example?subject=Demo%20von%20Abgleich%20anfragen&amp;body=Guten%20Tag%2C%0A%0Awir%20m%C3%B6chten%20Abgleich%20in%20einer%20Demo%20sehen.%0A%0AUnternehmen%3A%0AName%3A%0ATelefon%3A%0AAnzahl%20Nutzer%3A%0AWunschtermine%3A%0A">Demo anfragen</a>
+            </div>
+            <p class="fineprint">Ohne Kreditkarte. Ihre Daten liegen in Frankfurt am Main.</p>
+          </div>
+        </div>
+
+        <figure class="sheet" data-sheet aria-labelledby="sheet-caption">
+          <div class="sheet-grid">
+            <section class="ledger ledger-bank" aria-labelledby="bank-title">
+              <div class="ledger-head">
+                <h2 class="ledger-title" id="bank-title">Bankumsätze</h2>
+                <p class="ledger-sub">Geschäftskonto, Eingänge 09.–12.11.2026</p>
+              </div>
+              <div class="cols cols-bank" aria-hidden="true">
+                <span>Datum</span><span>Auftraggeber und Verwendungszweck</span><span class="num">Betrag</span><span></span>
+              </div>
+              <ul class="rows" role="list">
+                <li class="row" data-id="b1" data-match="o3">
+                  <span class="r-date">09.11.</span>
+                  <span class="r-main"><span class="r-name">Hartmann Metallbau GmbH</span><span class="r-ref"><span class="nb">RE-2026-0412</span></span></span>
+                  <span class="r-amount">4.760,00&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-note r-note-match">Zugeordnet zu <span class="nb">RE-2026-0412</span></span>
+                </li>
+                <li class="row" data-id="b2" data-match="o1">
+                  <span class="r-date">09.11.</span>
+                  <span class="r-main"><span class="r-name">Brandl Haustechnik GmbH</span><span class="r-ref">Rechnung <span class="nb">RE-2026-0398</span></span></span>
+                  <span class="r-amount">1.249,50&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-note r-note-match">Zugeordnet zu <span class="nb">RE-2026-0398</span></span>
+                </li>
+                <li class="row is-flag" data-id="b3" data-match="o5">
+                  <span class="r-date">10.11.</span>
+                  <span class="r-main"><span class="r-name">Kessler Logistik AG</span><span class="r-ref"><span class="nb">RE-2026-0419</span> abzgl. 2&nbsp;% Skonto</span></span>
+                  <span class="r-amount">9.604,00&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><span class="query">?</span></span>
+                  <span class="r-note">Zur Prüfung: 196,00&nbsp;€ weniger als Rechnung <span class="nb">RE-2026-0419</span> über 9.800,00&nbsp;€</span>
+                </li>
+                <li class="row" data-id="b4" data-match="o6">
+                  <span class="r-date">10.11.</span>
+                  <span class="r-main"><span class="r-name">Studio Feldmann</span><span class="r-ref"><span class="nb">RE-2026-0421</span></span></span>
+                  <span class="r-amount">2.380,00&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-note r-note-match">Zugeordnet zu <span class="nb">RE-2026-0421</span></span>
+                </li>
+                <li class="row is-flag" data-id="b5">
+                  <span class="r-date">11.11.</span>
+                  <span class="r-main"><span class="r-name">Wagner Elektrotechnik GmbH</span><span class="r-ref">Anzahlung Projekt Nordhafen</span></span>
+                  <span class="r-amount">1.000,00&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><span class="query">?</span></span>
+                  <span class="r-note">Zur Prüfung: keine passende offene Rechnung gefunden</span>
+                </li>
+                <li class="row" data-id="b6" data-match="o2">
+                  <span class="r-date">11.11.</span>
+                  <span class="r-main"><span class="r-name">Lindner Verpackung GmbH</span><span class="r-ref"><span class="nb">RE-2026-0407</span> Kd-Nr. 10233</span></span>
+                  <span class="r-amount">3.153,40&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-note r-note-match">Zugeordnet zu <span class="nb">RE-2026-0407</span></span>
+                </li>
+                <li class="row" data-id="b7" data-match="o4">
+                  <span class="r-date">12.11.</span>
+                  <span class="r-main"><span class="r-name">Pichler Holzbau GmbH</span><span class="r-ref"><span class="nb">RE-2026-0415</span></span></span>
+                  <span class="r-amount">6.902,00&nbsp;€</span>
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-note r-note-match">Zugeordnet zu <span class="nb">RE-2026-0415</span></span>
+                </li>
+              </ul>
+            </section>
+
+            <div class="sheet-gutter" aria-hidden="true"></div>
+
+            <section class="ledger ledger-open" aria-labelledby="open-title">
+              <div class="ledger-head">
+                <h2 class="ledger-title" id="open-title">Offene Posten</h2>
+                <p class="ledger-sub">Ausgangsrechnungen, Stand 09.11.2026</p>
+              </div>
+              <div class="cols cols-open" aria-hidden="true">
+                <span></span><span>Rechnung und Kunde</span><span class="num">Betrag</span>
+              </div>
+              <ul class="rows" role="list">
+                <li class="row" data-id="o1">
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0398</span><span class="r-cust">Brandl Haustechnik GmbH</span></span>
+                  <span class="r-amount">1.249,50&nbsp;€</span>
+                </li>
+                <li class="row" data-id="o2">
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0407</span><span class="r-cust">Lindner Verpackung GmbH</span></span>
+                  <span class="r-amount">3.153,40&nbsp;€</span>
+                </li>
+                <li class="row" data-id="o3">
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0412</span><span class="r-cust">Hartmann Metallbau GmbH</span></span>
+                  <span class="r-amount">4.760,00&nbsp;€</span>
+                </li>
+                <li class="row" data-id="o4">
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0415</span><span class="r-cust">Pichler Holzbau GmbH</span></span>
+                  <span class="r-amount">6.902,00&nbsp;€</span>
+                </li>
+                <li class="row is-flag" data-id="o5">
+                  <span class="r-mark" aria-hidden="true"><span class="query">?</span></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0419</span><span class="r-cust">Kessler Logistik AG</span></span>
+                  <span class="r-amount">9.800,00&nbsp;€</span>
+                </li>
+                <li class="row" data-id="o6">
+                  <span class="r-mark" aria-hidden="true"><svg class="tick" viewBox="0 0 20 20" focusable="false"><path pathLength="1" d="M3 10.6c1.7 1.2 3.1 2.9 4.3 5.1C9.8 10.2 13.1 6.1 17.6 3.4"/></svg></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0421</span><span class="r-cust">Studio Feldmann</span></span>
+                  <span class="r-amount">2.380,00&nbsp;€</span>
+                </li>
+                <li class="row" data-id="o7">
+                  <span class="r-mark" aria-hidden="true"></span>
+                  <span class="r-main"><span class="r-nr">RE-2026-0426</span><span class="r-cust">Ostermann Druck GmbH</span></span>
+                  <span class="r-amount">1.785,00&nbsp;€</span>
+                </li>
+              </ul>
+            </section>
+
+            <svg class="links" aria-hidden="true" focusable="false"></svg>
+          </div>
+          <figcaption id="sheet-caption" class="sheet-caption">Beispieldaten. Fünf Zahlungen sind ihren Rechnungen zugeordnet, zwei liegen zur Prüfung vor. Rechnung RE-2026-0426 ist noch nicht bezahlt und bleibt offen.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="ablauf" aria-labelledby="ablauf-title">
+      <div class="wrap">
+        <h2 class="section-title" id="ablauf-title">So läuft ein Abgleich</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n" aria-hidden="true">1</span>
+            <h3>Umsätze und Rechnungen einlesen</h3>
+            <p>Abgleich übernimmt Ihre Bankumsätze und die Liste Ihrer offenen Rechnungen.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">2</span>
+            <h3>Automatisch zuordnen</h3>
+            <p>Jede Zahlung wird mit den offenen Rechnungen verglichen. Passt sie eindeutig zu einer Rechnung, ordnet Abgleich sie zu.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">3</span>
+            <h3>Abweichungen prüfen</h3>
+            <p>Stimmt ein Betrag nicht oder fehlt die passende Rechnung, markiert Abgleich die Zahlung. Sie sehen, was abweicht, und entscheiden selbst.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">4</span>
+            <h3>Nach DATEV exportieren</h3>
+            <p>Die abgeglichenen Posten exportieren Sie nach DATEV, für Ihre eigene Buchhaltung oder für Ihre Steuerkanzlei.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-pricing" id="preise" aria-labelledby="preise-title">
+      <div class="wrap pricing">
+        <div class="pricing-copy">
+          <h2 class="section-title" id="preise-title">Preise</h2>
+          <p class="price-line"><span class="price">290&nbsp;€</span> pro Monat für bis zu 5&nbsp;Nutzer</p>
+          <p>Jeder weitere Nutzer kostet 40&nbsp;€ pro Monat. Alle Preise verstehen sich zuzüglich Umsatzsteuer.</p>
+          <p>Bevor Sie sich entscheiden, testen Sie Abgleich 14&nbsp;Tage lang kostenlos. Eine Kreditkarte brauchen Sie dafür nicht.</p>
+        </div>
+
+        <form class="calc" aria-labelledby="calc-title" novalidate>
+          <h3 class="calc-title" id="calc-title">Ihr Monatspreis</h3>
+          <label class="calc-label" for="users">Wie viele Personen arbeiten mit Abgleich?</label>
+          <div class="stepper">
+            <button type="button" class="stepper-btn" data-step="-1" aria-label="Einen Nutzer weniger" aria-controls="users">−</button>
+            <input id="users" name="users" type="number" inputmode="numeric" min="1" max="999" step="1" value="7">
+            <button type="button" class="stepper-btn" data-step="1" aria-label="Einen Nutzer mehr" aria-controls="users">+</button>
+          </div>
+          <dl class="calc-lines">
+            <div class="calc-row">
+              <dt>Grundpreis, bis zu 5 Nutzer</dt>
+              <dd>290,00&nbsp;€</dd>
+            </div>
+            <div class="calc-row" data-extra-row>
+              <dt data-extra-label>2 weitere Nutzer × 40,00&nbsp;€</dt>
+              <dd data-extra-sum>80,00&nbsp;€</dd>
+            </div>
+            <div class="calc-row calc-total">
+              <dt>Pro Monat, zzgl. USt.</dt>
+              <dd><output for="users" data-total>370,00&nbsp;€</output></dd>
+            </div>
+          </dl>
+          <!-- PLATZHALTER: Registrierungs-URL für den Testzugang -->
+          <a class="btn btn-primary btn-block" href="https://app.abgleich.example/registrieren">14 Tage kostenlos testen</a>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="datenschutz" aria-labelledby="datenschutz-title">
+      <div class="wrap facts-layout">
+        <div class="facts-intro">
+          <h2 class="section-title" id="datenschutz-title">Datenschutz und Betrieb</h2>
+          <p>Was Ihre IT und Ihr Datenschutzbeauftragter vor dem Test wissen müssen.</p>
+        </div>
+        <dl class="facts">
+          <div class="fact">
+            <dt>Serverstandort</dt>
+            <dd>Frankfurt am Main, Europäische Union</dd>
+          </div>
+          <div class="fact">
+            <dt>Auftragsverarbeitung</dt>
+            <dd>Ein DSGVO-konformer Auftragsverarbeitungsvertrag nach Art.&nbsp;28 DSGVO liegt bereit. <a href="mailto:vertrieb@abgleich.example?subject=Auftragsverarbeitungsvertrag%20f%C3%BCr%20Abgleich%20anfordern">AVV per E-Mail anfordern</a></dd>
+          </div>
+          <div class="fact">
+            <dt>Anbieter</dt>
+            <dd>Abgleich Software GmbH, Berlin</dd>
+          </div>
+          <div class="fact">
+            <dt>Export</dt>
+            <dd>DATEV</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section-closing" aria-labelledby="closing-title">
+      <div class="wrap closing">
+        <h2 class="closing-title" id="closing-title">Testen Sie Abgleich mit Ihren eigenen Umsätzen.</h2>
+        <p>14 Tage kostenlos und ohne Kreditkarte. Wenn Sie Abgleich lieber zuerst gemeinsam mit uns ansehen, fragen Sie eine Demo an.</p>
+        <div class="actions">
+          <!-- PLATZHALTER: Registrierungs-URL für den Testzugang -->
+          <a class="btn btn-primary" href="https://app.abgleich.example/registrieren">14 Tage kostenlos testen</a>
+          <a class="btn btn-outline" href="mailto:vertrieb@abgleich.example?subject=Demo%20von%20Abgleich%20anfragen&amp;body=Guten%20Tag%2C%0A%0Awir%20m%C3%B6chten%20Abgleich%20in%20einer%20Demo%20sehen.%0A%0AUnternehmen%3A%0AName%3A%0ATelefon%3A%0AAnzahl%20Nutzer%3A%0AWunschtermine%3A%0A">Demo anfragen</a>
+        </div>
+        <p class="closing-contact">Fragen zu Vertrag oder Datenschutz beantwortet unser Vertrieb: <a href="mailto:vertrieb@abgleich.example">vertrieb@abgleich.example</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Abgleich Software GmbH, Berlin</p>
+      <nav aria-label="Rechtliches">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

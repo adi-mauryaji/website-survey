@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>विद्यांकुर एकेडमी, अलीगंज, लखनऊ: JEE और NEET की तैयारी</title>
+<meta name="description" content="Class 11 और 12 के science students के लिए JEE और NEET का 2 साल का course। एक batch में ज़्यादा से ज़्यादा 30 बच्चे। फ़ीस ₹48,000 प्रति वर्ष। WhatsApp पर free demo class बुक करें।">
+<meta name="theme-color" content="#1F36A6">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:title" content="विद्यांकुर एकेडमी, अलीगंज, लखनऊ">
+<meta property="og:description" content="JEE और NEET की तैयारी, 30 बच्चों के batch में। नया batch 6 अप्रैल 2027 से। Free demo class WhatsApp पर बुक करें।">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 32'%3E%3Cellipse cx='20' cy='16' rx='18' ry='14' fill='%231F36A6'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/kadwa-700-devanagari.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Kadwa 700 (SIL OFL 1.1, see fonts/OFL.txt), self-hosted so the page needs no third-party request */
+@font-face{font-family:"Kadwa";font-style:normal;font-weight:700;font-display:swap;
+  src:url(fonts/kadwa-700-devanagari.woff2) format("woff2");
+  unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF}
+@font-face{font-family:"Kadwa";font-style:normal;font-weight:700;font-display:swap;
+  src:url(fonts/kadwa-700-latin.woff2) format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2122,U+2212}
+
+/* Tokens: an OMR answer sheet. Rose = what the academy printed, blue = what the visitor fills in or presses. */
+:root{
+  color-scheme:light;
+  --paper:#FFFFFF;
+  --tint:#FCEEF2;      /* OMR pink tint */
+  --omr:#B8234F;       /* printed drop-out ink: labels, bubble outlines, rules */
+  --omr-line:#E9B6C4;  /* hairlines between rows, decorative only */
+  --pen:#1F36A6;       /* ballpoint blue: fills, actions, links */
+  --pen-dark:#162887;
+  --ink:#1C2233;       /* reading text */
+  --muted:#5B6275;
+  --display:"Kadwa","Noto Serif Devanagari","Tiro Devanagari Hindi",Georgia,serif;
+  --text:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari","Nirmala UI","Kohinoor Devanagari",sans-serif;
+  --gutter:16px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.0625rem;line-height:1.7}
+h1,h2{font-family:var(--display);font-weight:700;line-height:1.32;margin:0;color:var(--ink);text-wrap:balance}
+h2{font-size:1.75rem}
+p,ol,dl,dd,figure{margin:0}
+a{color:var(--pen);text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:var(--gutter)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nowrap{white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:11px 20px;
+  background:var(--pen);color:#fff;border-radius:6px;text-decoration:none;
+  font-family:var(--display);font-weight:700;font-size:1.125rem;line-height:1.3;text-wrap:balance}
+.btn:hover{background:var(--pen-dark)}
+.btn svg{width:22px;height:22px;flex:none;fill:currentColor}
+.ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:6px 14px;
+  border:1.5px solid var(--pen);border-radius:6px;color:var(--pen);text-decoration:none;font-weight:600;line-height:1.3}
+.ghost svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ghost:hover{background:var(--tint)}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.brand{line-height:1.25}
+.brand-name{display:block;font-family:var(--display);font-weight:700;font-size:1.3125rem}
+.brand-place{font-size:.9375rem;color:var(--muted)}
+
+/* Hero */
+.hero{padding-block:20px 8px}
+.hero-grid{display:grid;gap:40px;align-items:center}
+.hero h1{font-size:2.125rem;max-width:13em}
+.lead{margin-top:16px;font-size:1.125rem;max-width:31em}
+.actions{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.alt{color:var(--muted);font-size:1rem;line-height:1.5}
+.alt a{font-weight:600}
+
+/* Roll-number grid: one batch, thirty bubbles */
+.roll{border:1.5px solid var(--omr);border-radius:3px;padding:18px 16px 16px;max-width:25rem}
+.seats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px 8px}
+.seat{aspect-ratio:5/4;border:1.5px solid var(--omr);border-radius:50%;display:grid;place-items:center;
+  color:var(--omr);font-size:.75rem;line-height:1;font-variant-numeric:tabular-nums}
+.roll figcaption{margin-top:16px;padding-top:12px;border-top:1px solid var(--omr-line);
+  font-family:var(--display);font-weight:700;font-size:1.25rem;line-height:1.4}
+
+/* Content bands */
+.band{padding-block:56px}
+.band-intro{margin-top:10px;max-width:32em}
+
+/* Course table */
+.courses{width:100%;max-width:46rem;margin-top:28px;border-collapse:collapse;font-size:1rem;line-height:1.55}
+.courses th,.courses td{padding:12px 10px 12px 0;text-align:left;vertical-align:top;border-top:1px solid var(--omr-line)}
+.courses thead > tr > *{border-top:0;border-bottom:1.5px solid var(--omr);padding-bottom:8px}
+.courses thead th{font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1.3}
+.courses tbody tr:first-child > *{border-top:0}
+.courses tbody th{width:30%;color:var(--omr);font-weight:600;font-size:.9375rem}
+.fee{display:block;font-family:var(--display);font-weight:700;font-size:1.875rem;line-height:1.25}
+
+/* Booking sheet */
+.sheet-band{background:var(--tint);padding-block:56px}
+.sheet-layout{display:grid;gap:24px;align-items:start}
+.sheet{position:relative;background:var(--paper);border:1.5px solid var(--omr);border-radius:3px;padding:20px 16px 24px 42px;max-width:44rem}
+.sheet::before{content:"";position:absolute;left:13px;top:22px;bottom:1px;width:11px;
+  background:linear-gradient(var(--ink) 0 9px,transparent 9px) 0 0/11px 30px;background-repeat:no-repeat space}
+.rules{background:var(--tint);border:1px solid var(--omr-line);border-radius:2px;padding:12px 14px;color:var(--omr);font-size:.9375rem;line-height:1.6}
+.rules-title{font-weight:700}
+.rules ol{padding-left:1.4em;margin-top:4px}
+.q{border:0;margin:0;padding:18px 0 14px;border-top:1px solid var(--omr-line);min-width:0}
+.rules + .q{border-top:0;margin-top:6px}
+.q legend{float:left;width:100%;padding:0;margin-bottom:8px;font-weight:600;line-height:1.5}
+.q legend + *{clear:both}
+.qn{display:inline-block;min-width:28px;margin-right:10px;padding:1px 0;border:1.5px solid var(--omr);border-radius:2px;
+  color:var(--omr);font-size:.875rem;text-align:center;font-variant-numeric:tabular-nums}
+.opts{display:flex;flex-wrap:wrap;gap:4px 22px}
+.opt{position:relative;display:inline-flex;align-items:center;gap:10px;min-height:46px;padding-right:4px;cursor:pointer}
+.opt input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.bubble{position:relative;flex:none;width:36px;height:28px;border:1.5px solid var(--omr);border-radius:50%;
+  display:grid;place-items:center;color:var(--omr);font-size:.8125rem;line-height:1}
+.bubble::after{content:"";position:absolute;inset:2px;background:var(--pen);
+  border-radius:47% 53% 49% 51% / 55% 45% 56% 44%;transform:scale(0);transition:transform .18s ease-out}
+.opt input:checked + .bubble{border-color:var(--pen)}
+.opt input:checked + .bubble::after{transform:scale(1)}
+.opt input:checked ~ .opt-text{color:var(--pen)}
+.opt input:focus-visible + .bubble{outline:3px solid var(--ink);outline-offset:3px}
+.field{padding:18px 0;border-top:1px solid var(--omr-line)}
+.field label{display:block;font-weight:600;margin-bottom:8px;line-height:1.5}
+.field small{font-weight:400;font-size:.9375rem;color:var(--muted)}
+.field input{width:100%;max-width:24rem;min-height:48px;padding:8px 12px;border:1.5px solid var(--omr);border-radius:2px;
+  background:var(--paper);color:var(--pen);font:inherit;font-weight:600}
+.field input:focus-visible{outline-offset:2px}
+.send{padding-top:18px;border-top:1.5px solid var(--omr)}
+.preview-label{font-size:.9375rem;color:var(--muted)}
+.preview{margin-top:6px;padding:12px 14px;border-left:3px solid var(--pen);background:var(--tint);
+  white-space:pre-line;font-size:.9375rem;line-height:1.6;overflow-wrap:anywhere}
+.send .btn{margin-top:18px}
+.send .alt{margin-top:12px}
+
+/* Academy + visit */
+.two{display:grid;gap:48px}
+.about p{max-width:30em;margin-top:12px}
+.facts{margin-top:16px}
+.facts div{padding:12px 0;border-top:1px solid var(--omr-line)}
+.facts div:first-child{border-top:0;padding-top:0}
+.facts dt{color:var(--omr);font-weight:600;font-size:.9375rem}
+
+footer{padding-block:28px 32px;border-top:1.5px solid var(--omr);color:var(--muted);font-size:.9375rem;line-height:1.6}
+
+/* Mobile dock: appears once the hero buttons scroll away */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;gap:8px;
+  padding:8px var(--gutter) calc(8px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1.5px solid var(--omr);
+  transform:translateY(110%);visibility:hidden;transition:transform .2s ease-out,visibility 0s linear .2s}
+.dock.show{transform:none;visibility:visible;transition:transform .2s ease-out,visibility 0s}
+.dock .btn{flex:1;justify-content:center;min-height:50px;font-size:1.0625rem;padding-inline:12px;white-space:nowrap}
+.dock .ghost{min-width:56px;min-height:50px;padding:0 12px}
+.has-dock{padding-bottom:72px}
+
+/* The one orchestrated moment: the thirty seats are counted in, once, on load */
+@media (prefers-reduced-motion:no-preference){
+  .seat{animation:seat-in .3s cubic-bezier(.2,.7,.3,1) both;animation-delay:calc(var(--i) * 32ms + 200ms)}
+  @keyframes seat-in{from{opacity:0;transform:scale(.45)}}
+}
+@media (prefers-reduced-motion:reduce){
+  .bubble::after,.dock{transition:none}
+}
+
+@media (min-width:600px){
+  :root{--gutter:28px}
+  .hero h1{font-size:2.75rem}
+  .actions{flex-direction:row;flex-wrap:wrap;align-items:center;gap:14px 22px}
+  .sheet{padding:28px 32px 32px 56px}
+  .sheet::before{left:20px}
+  .two{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  :root{--gutter:40px}
+  body{font-size:1.125rem}
+  .top{padding-block:22px}
+  .hero{padding-block:40px 88px}
+  .hero-grid{grid-template-columns:1.6fr 1fr;gap:64px}
+  .hero h1{font-size:3.25rem;line-height:1.26}
+  .lead{font-size:1.25rem}
+  .roll{justify-self:end;width:100%;padding:24px 22px 20px}
+  .seat{font-size:.8125rem}
+  .band,.sheet-band{padding-block:88px}
+  h2{font-size:2.25rem}
+  .sheet-layout{grid-template-columns:1fr 1.7fr;gap:56px}
+  .sheet-layout .band-intro{max-width:20em}
+  .dock{display:none}
+  .has-dock{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+</svg>
+
+<header class="wrap top">
+  <div class="brand">
+    <span class="brand-name">विद्यांकुर एकेडमी</span>
+    <span class="brand-place">अलीगंज, लखनऊ</span>
+  </div>
+  <a class="ghost" href="tel:+910000000001"><svg aria-hidden="true"><use href="#i-phone"/></svg>कॉल करें</a>
+</header>
+
+<main>
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div>
+        <h1 id="hero-title">JEE और NEET की तैयारी, 30&nbsp;बच्चों के batch में</h1>
+        <p class="lead">Class 11 और 12 के science students के लिए 2 साल का course। नया batch 6 अप्रैल 2027 से शुरू होगा। फ़ीस ₹48,000 प्रति वर्ष है, जिसे 2 किस्तों में भर सकते हैं।</p>
+        <div class="actions" id="hero-actions">
+          <a class="btn wa-link" href="https://wa.me/910000000001?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A5%81%E0%A4%B0%20%E0%A4%8F%E0%A4%95%E0%A5%87%E0%A4%A1%E0%A4%AE%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%20free%20demo%20class%20%E0%A4%AC%E0%A5%81%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp पर free demo class बुक करें</a>
+          <p class="alt">या कॉल करें <a class="nowrap" href="tel:+910000000001">+91 00000 00001</a><br>सोमवार से शनिवार, सुबह 9 से शाम 7 बजे तक</p>
+        </div>
+      </div>
+
+      <figure class="roll">
+        <ol class="seats" aria-hidden="true">
+          <li class="seat" style="--i:0">01</li>
+          <li class="seat" style="--i:1">02</li>
+          <li class="seat" style="--i:2">03</li>
+          <li class="seat" style="--i:3">04</li>
+          <li class="seat" style="--i:4">05</li>
+          <li class="seat" style="--i:5">06</li>
+          <li class="seat" style="--i:6">07</li>
+          <li class="seat" style="--i:7">08</li>
+          <li class="seat" style="--i:8">09</li>
+          <li class="seat" style="--i:9">10</li>
+          <li class="seat" style="--i:10">11</li>
+          <li class="seat" style="--i:11">12</li>
+          <li class="seat" style="--i:12">13</li>
+          <li class="seat" style="--i:13">14</li>
+          <li class="seat" style="--i:14">15</li>
+          <li class="seat" style="--i:15">16</li>
+          <li class="seat" style="--i:16">17</li>
+          <li class="seat" style="--i:17">18</li>
+          <li class="seat" style="--i:18">19</li>
+          <li class="seat" style="--i:19">20</li>
+          <li class="seat" style="--i:20">21</li>
+          <li class="seat" style="--i:21">22</li>
+          <li class="seat" style="--i:22">23</li>
+          <li class="seat" style="--i:23">24</li>
+          <li class="seat" style="--i:24">25</li>
+          <li class="seat" style="--i:25">26</li>
+          <li class="seat" style="--i:26">27</li>
+          <li class="seat" style="--i:27">28</li>
+          <li class="seat" style="--i:28">29</li>
+          <li class="seat" style="--i:29">30</li>
+        </ol>
+        <figcaption>एक batch में 30 roll number होते हैं। 31वाँ नहीं।</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap band" aria-labelledby="courses-title">
+    <h2 id="courses-title">दो course, दोनों 2 साल के</h2>
+    <p class="band-intro">दोनों course Class 11 और Class 12 के science students के लिए हैं। फ़र्क़ सिर्फ़ परीक्षा और विषयों का है।</p>
+    <table class="courses">
+      <caption class="vh">JEE और NEET course की तुलना</caption>
+      <thead>
+        <tr><td></td><th scope="col">JEE</th><th scope="col">NEET</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">किसके लिए</th><td>Engineering (IIT, NIT आदि)</td><td>Medical (MBBS, BDS आदि)</td></tr>
+        <tr><th scope="row">परीक्षा</th><td>JEE Main और JEE Advanced</td><td>NEET (UG)</td></tr>
+        <tr><th scope="row">विषय</th><td>Physics, Chemistry, Maths</td><td>Physics, Chemistry, Biology</td></tr>
+        <tr><th scope="row">अवधि</th><td colspan="2">2 साल, Class 11 और Class 12</td></tr>
+        <tr><th scope="row">नया batch</th><td colspan="2">6 अप्रैल 2027 से</td></tr>
+        <tr><th scope="row">Batch में बच्चे</th><td colspan="2">ज़्यादा से ज़्यादा 30</td></tr>
+        <tr><th scope="row">फ़ीस</th><td colspan="2"><span class="fee">₹48,000</span>प्रति वर्ष। 2 किस्तों में भर सकते हैं।</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="sheet-band" id="demo" aria-labelledby="demo-title">
+    <div class="wrap sheet-layout">
+      <div>
+        <h2 id="demo-title">Free demo class बुक करें</h2>
+        <p class="band-intro">पहले एक class में बैठकर देखिए, फिर तय कीजिए। यह शीट भरने में एक मिनट लगेगा।</p>
+      </div>
+
+      <form class="sheet" id="demo-form" novalidate>
+        <div class="rules">
+          <p class="rules-title">निर्देश</p>
+          <ol>
+            <li>हर सवाल में एक गोला भरें।</li>
+            <li>नीचे वाला बटन दबाएँ। WhatsApp पर message तैयार मिलेगा, उसे भेज दें।</li>
+            <li>Academy आपको demo class का दिन और समय बताएगी।</li>
+          </ol>
+        </div>
+
+        <fieldset class="q">
+          <legend><span class="qn">1</span>आप कौन हैं?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="role" value="मैं छात्र/छात्रा हूँ"><span class="bubble" aria-hidden="true">क</span><span class="opt-text">छात्र या छात्रा</span></label>
+            <label class="opt"><input type="radio" name="role" value="मैं अभिभावक हूँ"><span class="bubble" aria-hidden="true">ख</span><span class="opt-text">माता-पिता या अभिभावक</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend><span class="qn">2</span>किस परीक्षा की तैयारी करनी है?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="course" value="JEE"><span class="bubble" aria-hidden="true">क</span><span class="opt-text">JEE</span></label>
+            <label class="opt"><input type="radio" name="course" value="NEET"><span class="bubble" aria-hidden="true">ख</span><span class="opt-text">NEET</span></label>
+            <label class="opt"><input type="radio" name="course" value="अभी तय नहीं"><span class="bubble" aria-hidden="true">ग</span><span class="opt-text">अभी तय नहीं</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="q">
+          <legend><span class="qn">3</span>छात्र अभी किस कक्षा में है?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="grade" value="10वीं"><span class="bubble" aria-hidden="true">क</span><span class="opt-text">10वीं</span></label>
+            <label class="opt"><input type="radio" name="grade" value="11वीं"><span class="bubble" aria-hidden="true">ख</span><span class="opt-text">11वीं</span></label>
+            <label class="opt"><input type="radio" name="grade" value="12वीं"><span class="bubble" aria-hidden="true">ग</span><span class="opt-text">12वीं</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="sname"><span class="qn">4</span>छात्र का नाम <small>(ज़रूरी नहीं)</small></label>
+          <input id="sname" name="sname" type="text" autocomplete="name" enterkeyhint="send">
+        </div>
+
+        <div class="send">
+          <p class="preview-label" id="preview-label">WhatsApp पर यह message जाएगा:</p>
+          <p class="preview" id="preview" aria-labelledby="preview-label">नमस्ते, मुझे विद्यांकुर एकेडमी में free demo class बुक करनी है।</p>
+          <a class="btn wa-link" id="sheet-cta" href="https://wa.me/910000000001?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A5%81%E0%A4%B0%20%E0%A4%8F%E0%A4%95%E0%A5%87%E0%A4%A1%E0%A4%AE%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%20free%20demo%20class%20%E0%A4%AC%E0%A5%81%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp पर free demo class बुक करें</a>
+          <p class="alt">WhatsApp नहीं है? कॉल करें <a class="nowrap" href="tel:+910000000001">+91 00000 00001</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="wrap band two" aria-label="Academy और पता">
+    <div class="about">
+      <h2>2016 से अलीगंज में</h2>
+      <p>विद्यांकुर एकेडमी 2016 में शुरू हुई। Academy के director रमेश तिवारी हैं, जिन्होंने Physics में M.Sc. किया है।</p>
+    </div>
+    <div>
+      <h2>मिलने का समय और पता</h2>
+      <dl class="facts">
+        <div><dt>समय</dt><dd>सोमवार से शनिवार, सुबह 9 से शाम 7 बजे तक। रविवार बंद।</dd></div>
+        <div><dt>फ़ोन और WhatsApp</dt><dd><a class="nowrap" href="tel:+910000000001">+91 00000 00001</a></dd></div>
+        <!-- PLACEHOLDER: add the full street address and landmark above "अलीगंज, लखनऊ", and replace the maps link with the academy's own Google Maps link -->
+        <div><dt>पता</dt><dd>अलीगंज, लखनऊ<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Vidyankur%20Academy%20Aliganj%20Lucknow" target="_blank" rel="noopener">Google Maps पर रास्ता देखें</a></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 विद्यांकुर एकेडमी (Vidyankur Academy), अलीगंज, लखनऊ</div>
+</footer>
+
+<nav class="dock" id="dock" aria-label="जल्दी संपर्क">
+  <a class="btn wa-link" href="https://wa.me/910000000001?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%82%E0%A4%95%E0%A5%81%E0%A4%B0%20%E0%A4%8F%E0%A4%95%E0%A5%87%E0%A4%A1%E0%A4%AE%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%20free%20demo%20class%20%E0%A4%AC%E0%A5%81%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%80%20%E0%A4%B9%E0%A5%88%E0%A5%A4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Free demo बुक करें</a>
+  <a class="ghost" href="tel:+910000000001"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="vh">कॉल करें</span></a>
+</nav>
+
+<script>
+(function () {
+  var NUMBER = "910000000001"; // PLACEHOLDER from the brief: +91 00000 00001
+  var GREETING = "नमस्ते, मुझे विद्यांकुर एकेडमी में free demo class बुक करनी है।";
+  function waLink(text) { return "https://wa.me/" + NUMBER + "?text=" + encodeURIComponent(text); }
+
+  // Booking sheet: every filled bubble is added to the WhatsApp message, shown before sending.
+  var form = document.getElementById("demo-form");
+  var preview = document.getElementById("preview");
+  var cta = document.getElementById("sheet-cta");
+  function picked(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : "";
+  }
+  function compose() {
+    var lines = [GREETING];
+    var role = picked("role"), course = picked("course"), grade = picked("grade");
+    var name = form.elements.sname.value.replace(/\s+/g, " ").trim();
+    if (role) lines.push(role + "।");
+    if (course) lines.push("तैयारी: " + course);
+    if (grade) lines.push("अभी कक्षा: " + grade);
+    if (name) lines.push("छात्र का नाम: " + name);
+    var text = lines.join("\n");
+    preview.textContent = text;
+    cta.href = waLink(text);
+  }
+  form.addEventListener("change", compose);
+  form.addEventListener("input", compose);
+  form.addEventListener("submit", function (e) { e.preventDefault(); compose(); cta.click(); });
+  compose();
+
+  // Mobile dock: shown only while neither the hero buttons nor the sheet are on screen.
+  var dock = document.getElementById("dock");
+  if (!("IntersectionObserver" in window)) return;
+  document.body.classList.add("has-dock");
+  var seen = { hero: true, demo: false };
+  var targets = { hero: document.getElementById("hero-actions"), demo: form };
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { seen[en.target === form ? "demo" : "hero"] = en.isIntersecting; });
+    dock.classList.toggle("show", !seen.hero && !seen.demo);
+  });
+  io.observe(targets.hero);
+  io.observe(targets.demo);
+})();
+</script>
+</body>
+</html>

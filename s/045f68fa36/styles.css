@@ -1,0 +1,658 @@
+/* Hartwell Mobility Clinic
+   One family (Atkinson Hyperlegible Next, made for low-vision readers),
+   white paper, deep moor green, and one yellow borrowed from stair-edge
+   nosing strips: the yellow marks the edges people need to see. */
+
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("fonts/atkinson-hyperlegible-next-latin.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --paper: #FFFFFF;
+  --ink: #17302A;
+  --moor: #1E5B4A;
+  --nosing: #F6C744;
+  --lichen: #E4EDE7;
+  --rule: #B9CBC1;
+
+  --font: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", Verdana, Tahoma, sans-serif;
+
+  /* Classical scale: 18 21 24 36 48 60 72 (px at a 16px root) */
+  --t-18: 1.125rem;
+  --t-21: 1.3125rem;
+  --t-24: 1.5rem;
+  --t-36: 2.25rem;
+  --t-48: 3rem;
+  --t-60: 3.75rem;
+  --t-72: 4.5rem;
+
+  --nose: 0.625rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --wrap: 72rem;
+  --measure: 62ch;
+  --radius: 0.375rem;
+}
+
+/* The text size control scales everything from the root. */
+html[data-text="2"] { font-size: 112.5%; }
+html[data-text="3"] { font-size: 125%; }
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  font-variant-numeric: lining-nums;
+}
+
+@media (min-width: 48rem) {
+  body { font-size: var(--t-21); }
+}
+
+h1, h2, h3, p, ul, ol, address, table { margin: 0; }
+
+h1, h2, h3 {
+  color: var(--moor);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, var(--t-36));
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--t-24);
+  font-weight: 700;
+}
+
+p, li { text-wrap: pretty; }
+
+a {
+  color: var(--moor);
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover { text-decoration-thickness: 0.16em; }
+
+/* Focus: ink ring outside a yellow ring, visible on white, yellow and green. */
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--nosing);
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip {
+  position: absolute;
+  left: var(--gutter);
+  top: -10rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: var(--nosing);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.skip:focus { top: 0.75rem; }
+
+/* ---------- Header ---------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1.25rem;
+}
+
+.brand {
+  display: grid;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand__name {
+  color: var(--moor);
+  font-size: var(--t-24);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.brand__line {
+  font-size: var(--t-18);
+}
+
+.masthead__tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+.textsize { display: none; }
+
+.js .textsize {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.textsize__label {
+  font-size: var(--t-18);
+  margin-right: 0.25rem;
+}
+
+.textsize__btn {
+  min-width: 3rem;
+  min-height: 3rem;
+  padding: 0 0.5rem;
+  border: 2px solid var(--moor);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--moor);
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.textsize__btn--1 { font-size: 1.125rem; }
+.textsize__btn--2 { font-size: 1.375rem; }
+.textsize__btn--3 { font-size: 1.625rem; }
+
+.textsize__btn:hover { background: var(--lichen); }
+
+.textsize__btn[aria-pressed="true"] {
+  background: var(--moor);
+  color: var(--paper);
+}
+
+.callbtn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.5rem 1.125rem;
+  border-radius: var(--radius);
+  background: var(--nosing);
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.callbtn:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.09em;
+}
+
+.nav { background: var(--paper); }
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.75rem;
+  padding-block: 0.25rem 0.75rem;
+}
+
+.nav__list a {
+  display: inline-block;
+  padding-block: 0.625rem;
+  font-weight: 700;
+  font-size: var(--t-18);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.hero__grid {
+  display: grid;
+  gap: 2.5rem 4rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 9vw, var(--t-72));
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  max-width: 11ch;
+}
+
+.lede {
+  margin-top: 1.75rem;
+  max-width: 34em;
+  font-size: var(--t-21);
+}
+
+@media (min-width: 48rem) {
+  .lede { font-size: var(--t-24); line-height: 1.5; }
+}
+
+.hero__aside {
+  align-self: end;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--ink);
+}
+
+.hero__aside-intro {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.plainlist {
+  padding-left: 1.25em;
+}
+
+.plainlist li + li { margin-top: 0.375rem; }
+
+.plainlist li::marker,
+.bring__list li::marker,
+.family__list li::marker,
+.access li::marker { color: var(--moor); }
+
+@media (min-width: 62rem) {
+  .hero__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); }
+}
+
+/* ---------- Phone band: the yellow edge ---------- */
+
+.band {
+  background: var(--nosing);
+  color: var(--ink);
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+
+.band__grid {
+  display: grid;
+  gap: 0.75rem 3.5rem;
+}
+
+.band__title {
+  color: var(--ink);
+  font-size: var(--t-24);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.band__number {
+  justify-self: start;
+  color: var(--ink);
+  font-size: clamp(2rem, 11vw, 6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.12em;
+}
+
+.band__number:hover { text-decoration-thickness: 0.09em; }
+
+.band__details p + p { margin-top: 0.25rem; }
+
+@media (min-width: 75rem) {
+  .band__grid {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "title title"
+      "number details";
+    align-items: end;
+  }
+  .band__title { grid-area: title; }
+  .band__number { grid-area: number; }
+  .band__details { grid-area: details; padding-bottom: 0.875rem; }
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding-block: clamp(3.5rem, 9vw, 6rem);
+}
+
+.section--rule {
+  border-top: 1px solid var(--rule);
+}
+
+.section--lichen {
+  background: var(--lichen);
+}
+
+.section__intro {
+  margin-top: 1rem;
+  max-width: var(--measure);
+}
+
+/* ---------- Stairs: a real sequence, drawn as steps going up ---------- */
+
+.stairs {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.stair {
+  background: var(--lichen);
+  border-top: var(--nose) solid var(--nosing);
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+.stair__num {
+  display: block;
+  color: var(--moor);
+  font-size: var(--t-48);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.stair h3 { margin-bottom: 0.5rem; }
+
+@media (min-width: 52rem) {
+  .stairs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    border-bottom: 3px solid var(--ink);
+  }
+  .stair:nth-child(1) { margin-top: 9rem; }
+  .stair:nth-child(2) { margin-top: 4.5rem; }
+  .stair + .stair { border-left: 2px solid var(--paper); }
+}
+
+.bring {
+  margin-top: 3rem;
+  max-width: var(--measure);
+}
+
+.bring h3 { margin-bottom: 0.75rem; }
+
+.bring__list {
+  padding-left: 1.25em;
+  margin-bottom: 0.75rem;
+}
+
+.bring__list li + li { margin-top: 0.25rem; }
+
+@media (min-width: 52rem) {
+  .bring {
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 0 2rem;
+  }
+  .bring h3 { grid-row: span 2; }
+  .bring__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.25rem 2.5rem;
+  }
+  .bring__list li + li { margin-top: 0; }
+}
+
+/* ---------- Services and prices ---------- */
+
+.services {
+  margin-top: 2.5rem;
+  border-top: 3px solid var(--ink);
+}
+
+.service {
+  display: grid;
+  gap: 0.5rem 3rem;
+  padding-block: 1.75rem 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.service__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.5rem;
+}
+
+.service__amount {
+  color: var(--moor);
+  font-size: var(--t-48);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.service__unit {
+  font-weight: 700;
+}
+
+.service__desc { max-width: var(--measure); }
+
+@media (min-width: 52rem) {
+  .service {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-areas:
+      "name price"
+      "desc price";
+    align-items: start;
+  }
+  .service__name { grid-area: name; }
+  .service__desc { grid-area: desc; }
+  .service__price { grid-area: price; }
+}
+
+/* ---------- Families ---------- */
+
+.family__grid {
+  display: grid;
+  gap: 2rem 4rem;
+}
+
+.family__list {
+  padding-left: 1.25em;
+  max-width: var(--measure);
+}
+
+.family__list li + li { margin-top: 1rem; }
+
+@media (min-width: 62rem) {
+  .family__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .family__list { margin-top: 0.5rem; }
+}
+
+/* ---------- Team ---------- */
+
+.team {
+  list-style: none;
+  padding: 0;
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 2rem 3rem;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.person__photo {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  background: var(--lichen);
+  color: var(--moor);
+  font-size: var(--t-36);
+  font-weight: 800;
+}
+
+.person__name { margin-bottom: 0.25rem; }
+
+.team__check {
+  margin-top: 2.5rem;
+  max-width: var(--measure);
+}
+
+@media (min-width: 52rem) {
+  .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .person { grid-template-columns: 8rem minmax(0, 1fr); gap: 1.5rem; }
+}
+
+/* ---------- Finding us ---------- */
+
+.finding__grid {
+  display: grid;
+  gap: 3rem 4rem;
+}
+
+.address {
+  margin-top: 1.5rem;
+  font-style: normal;
+  font-size: var(--t-24);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.access {
+  margin-block: 1.25rem;
+  padding-left: 1.25em;
+}
+
+.hours__title { margin-bottom: 1rem; }
+
+.hours {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.hours th,
+.hours td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.75rem 1.5rem 0.75rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hours tr:first-child th,
+.hours tr:first-child td { border-top: 3px solid var(--ink); }
+
+.hours th { font-weight: 700; }
+
+.hours td {
+  padding-right: 0;
+  white-space: nowrap;
+}
+
+@media (min-width: 52rem) {
+  .finding__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hours__title { margin-top: 0.5rem; }
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--moor);
+  color: var(--paper);
+  border-top: var(--nose) solid var(--nosing);
+  padding-block: clamp(3rem, 7vw, 4.5rem);
+}
+
+.footer a { color: var(--paper); }
+
+.footer__grid {
+  display: grid;
+  gap: 2.5rem 4rem;
+}
+
+.footer__ask {
+  font-size: var(--t-24);
+  font-weight: 700;
+}
+
+.footer__number {
+  display: inline-block;
+  margin-block: 0.25rem 0.5rem;
+  color: var(--nosing);
+  font-size: clamp(2.25rem, 9vw, var(--t-60));
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.footer .footer__number { color: var(--nosing); }
+
+.footer__meta p + p { margin-top: 0.75rem; }
+
+.footer__small { font-size: var(--t-18); }
+
+@media (min-width: 52rem) {
+  .footer__grid {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: end;
+  }
+}
+
+/* ---------- Print: a page for the fridge door ---------- */
+
+@media print {
+  .skip,
+  .nav,
+  .textsize,
+  .callbtn { display: none !important; }
+  body { font-size: 12pt; }
+  .band,
+  .section--lichen,
+  .footer,
+  .stair { background: none; color: #000; }
+  .band { border-block: 4pt solid #000; }
+  .stairs { display: block; border: 0; }
+  .stair { margin: 0 0 8pt; border-top: 2pt solid #000; }
+  .footer, .footer a, .footer .footer__number { color: #000; }
+  a { color: #000; }
+  .hero { padding-block: 12pt 18pt; }
+  .section { padding-block: 18pt; }
+  .footer { padding-block: 12pt 0; }
+  .person__photo { display: none; }
+  .person { display: block; }
+  .stair,
+  .service,
+  .person,
+  .bring,
+  .hours,
+  .footer { break-inside: avoid; }
+}

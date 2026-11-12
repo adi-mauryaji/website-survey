@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KHALI SADAK — Monsoon Static · drops 16.01.27, 8 PM IST</title>
+  <meta name="description" content="Monsoon Static: the next drop from KHALI SADAK, Mumbai. 6 pieces, ₹1,499–₹3,999. Live 16 January 2027, 8 PM IST. Get the drop alert.">
+  <meta name="theme-color" content="#0b0b0c">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KHALI SADAK — Monsoon Static">
+  <meta property="og:description" content="6 pieces. Small batch. Made in India. Drops 16.01.27, 8 PM IST. Get the alert.">
+  <!-- PLACEHOLDER: add og:image (1200×630 drop poster) once the client sends final art -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Decide motion before first paint: saved choice > OS reduced-motion setting > on */
+    (function () {
+      var m = null;
+      try { m = localStorage.getItem('ks-motion'); } catch (e) {}
+      if (!m) m = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches ? 'off' : 'on';
+      document.documentElement.dataset.motion = m;
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#alerts">Skip to drop alerts</a>
+
+  <!-- ===== Ticker ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>MONSOON STATIC ✶ 16.01.27 ✶ 8 PM IST ✶ 6 PIECES ✶ SMALL BATCH ✶ MADE IN INDIA ✶ READY REHNA ✶&nbsp;</span>
+      <span>MONSOON STATIC ✶ 16.01.27 ✶ 8 PM IST ✶ 6 PIECES ✶ SMALL BATCH ✶ MADE IN INDIA ✶ READY REHNA ✶&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="Khali Sadak, back to top">
+      <span class="logo__en">KHALI SADAK</span>
+      <span class="logo__hi" lang="hi">खाली सड़क</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#pieces">Pieces</a>
+      <a href="#facts">Drop info</a>
+      <a href="https://www.instagram.com/khalisadak.studio/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (opens in a new tab)</span></a>
+    </nav>
+    <div class="header__actions">
+      <button class="motion-toggle" type="button" aria-pressed="true" data-motion-toggle>
+        <span class="motion-toggle__dot" aria-hidden="true"></span>
+        <span class="motion-toggle__label">Motion</span>
+      </button>
+      <a class="btn btn--small" href="#alerts">Get alerts</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero__static" aria-hidden="true"></canvas>
+      <div class="hero__scan" aria-hidden="true"></div>
+
+      <div class="osd osd--tl" aria-hidden="true"><span class="blink">▶</span> PLAY &nbsp;CH&nbsp;01</div>
+      <div class="osd osd--tr" aria-hidden="true"><span class="rec">●</span> REC</div>
+
+      <div class="hero__inner">
+        <p class="hero__kicker"><span class="tag">Next drop</span> KHALI SADAK · Mumbai</p>
+
+        <h1 id="hero-title" class="hero__title">
+          <span class="sr-only">Monsoon Static</span>
+          <span class="glitch" data-text="MONSOON" data-scramble aria-hidden="true">MONSOON</span>
+          <span class="glitch glitch--y" data-text="STATIC" data-scramble aria-hidden="true">STATIC</span>
+        </h1>
+
+        <div class="hero__bottom">
+        <div class="hero__info">
+        <p class="hero__sub">6 pieces. Small batch. Made in India.<br>
+          Drops <strong>16 January 2027, 8 PM IST</strong>, only on this site.</p>
+
+        <!-- Countdown -->
+        <div class="countdown" data-countdown>
+          <p class="sr-only">Drop goes live on 16 January 2027 at 8 PM India Standard Time.</p>
+          <div class="countdown__grid" aria-hidden="true">
+            <div class="cd"><span class="cd__num" data-unit="d">--</span><span class="cd__lbl">days</span></div>
+            <div class="cd"><span class="cd__num" data-unit="h">--</span><span class="cd__lbl">hrs</span></div>
+            <div class="cd"><span class="cd__num" data-unit="m">--</span><span class="cd__lbl">min</span></div>
+            <div class="cd"><span class="cd__num" data-unit="s">--</span><span class="cd__lbl">sec</span></div>
+          </div>
+          <p class="countdown__live" hidden>● We're live. The drop is on now.</p>
+        </div>
+        </div>
+
+        <!-- Signup (hero) -->
+        <form class="signup signup--hero" data-signup novalidate>
+          <label class="signup__label" for="email-hero">Email me when it drops</label>
+          <div class="signup__row">
+            <input id="email-hero" class="signup__input" type="email" name="email" inputmode="email"
+                   autocomplete="email" placeholder="your@email.com" required
+                   aria-describedby="email-hero-help email-hero-status">
+            <button class="btn signup__btn" type="submit">Alert me <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="signup__help" id="email-hero-help">One heads-up when it drops. No spam, unsubscribe anytime.</p>
+          <p class="signup__status" id="email-hero-status" role="status" aria-live="polite"></p>
+        </form>
+        </div>
+      </div>
+
+      <div class="osd osd--bl" aria-hidden="true">16 JAN 2027 &nbsp;20:00 IST</div>
+      <div class="osd osd--br" aria-hidden="true">SIGNAL <i class="meter meter--5" data-signal style="--lvl:2"></i></div>
+    </section>
+
+    <!-- ===== Tapes ===== -->
+    <div class="tapes" aria-hidden="true">
+      <div class="tape tape--a">
+        <div class="tape__track">
+          <span>NO SIGNAL TILL 16.01 ✶ MONSOON STATIC ✶ KHALI SADAK ✶ NO SIGNAL TILL 16.01 ✶ MONSOON STATIC ✶ KHALI SADAK ✶&nbsp;</span>
+          <span>NO SIGNAL TILL 16.01 ✶ MONSOON STATIC ✶ KHALI SADAK ✶ NO SIGNAL TILL 16.01 ✶ MONSOON STATIC ✶ KHALI SADAK ✶&nbsp;</span>
+        </div>
+      </div>
+      <div class="tape tape--b">
+        <div class="tape__track">
+          <span>8 PM IST ✶ ₹1,499 – ₹3,999 ✶ 6 PIECES ✶ SMALL BATCH ✶ 8 PM IST ✶ ₹1,499 – ₹3,999 ✶ 6 PIECES ✶ SMALL BATCH ✶&nbsp;</span>
+          <span>8 PM IST ✶ ₹1,499 – ₹3,999 ✶ 6 PIECES ✶ SMALL BATCH ✶ 8 PM IST ✶ ₹1,499 – ₹3,999 ✶ 6 PIECES ✶ SMALL BATCH ✶&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Pieces ===== -->
+    <section class="pieces" id="pieces" aria-labelledby="pieces-title">
+      <div class="section-head">
+        <p class="eyebrow">The drop · 06 pieces</p>
+        <h2 id="pieces-title" class="h2 reveal">Six pieces.<br><span class="hl">All under static.</span></h2>
+        <p class="lede reveal">Full looks come through at 8 PM on 16.01. Till then, you get the outlines.
+          <span class="nowrap">Hover or scroll to tune in.</span></p>
+      </div>
+
+      <ul class="grid" role="list">
+        <li class="card reveal" style="--tile:#141416;--ink:#f3efe4" data-tune>
+          <div class="card__screen">
+            <svg class="garment" viewBox="0 0 200 220" aria-hidden="true">
+              <path class="g-fill" d="M70 28 Q100 46 130 28 L184 52 L170 104 L146 96 L148 204 L52 204 L54 96 L30 104 L16 52 Z"/>
+              <path class="g-line" d="M70 28 Q100 52 130 28"/>
+              <rect class="g-redact" x="72" y="88" width="56" height="30"/>
+            </svg>
+            <span class="card__osd card__osd--tl" aria-hidden="true">CH 01</span>
+            <span class="card__osd card__osd--tr" aria-hidden="true"><span class="sig-word">SIGNAL </span><i class="meter"></i></span>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__name">Oversized Tee <span class="card__no">01</span></h3>
+            <p class="card__price">Price on drop day</p>
+          </div>
+        </li>
+
+        <li class="card reveal" style="--tile:#ffd60a;--ink:#0b0b0c" data-tune>
+          <div class="card__screen">
+            <svg class="garment" viewBox="0 0 200 220" aria-hidden="true">
+              <path class="g-fill" d="M70 28 Q100 46 130 28 L184 52 L170 104 L146 96 L148 204 L52 204 L54 96 L30 104 L16 52 Z"/>
+              <path class="g-line" d="M70 28 Q100 52 130 28"/>
+              <rect class="g-redact" x="60" y="120" width="80" height="22"/>
+            </svg>
+            <span class="card__osd card__osd--tl" aria-hidden="true">CH 02</span>
+            <span class="card__osd card__osd--tr" aria-hidden="true"><span class="sig-word">SIGNAL </span><i class="meter"></i></span>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__name">Oversized Tee <span class="card__no">02</span></h3>
+            <p class="card__price">Price on drop day</p>
+          </div>
+        </li>
+
+        <li class="card reveal" style="--tile:#2a2a2e;--ink:#ffd60a" data-tune>
+          <div class="card__screen">
+            <svg class="garment" viewBox="0 0 200 220" aria-hidden="true">
+              <path class="g-fill" d="M76 52 C70 14 130 14 124 52 L142 56 L176 74 L194 180 L170 186 L154 106 L152 206 L48 206 L46 106 L30 186 L6 180 L24 74 L58 56 Z"/>
+              <path class="g-line" d="M76 52 C84 70 116 70 124 52"/>
+              <path class="g-line" d="M92 64 L90 100 M108 64 L110 100"/>
+              <path class="g-line" d="M70 150 L130 150 L140 188 L60 188 Z"/>
+              <rect class="g-redact" x="70" y="104" width="60" height="26"/>
+            </svg>
+            <span class="card__osd card__osd--tl" aria-hidden="true">CH 03</span>
+            <span class="card__osd card__osd--tr" aria-hidden="true"><span class="sig-word">SIGNAL </span><i class="meter"></i></span>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__name">Hoodie <span class="card__no">01</span></h3>
+            <p class="card__price">Price on drop day</p>
+          </div>
+        </li>
+
+        <li class="card reveal" style="--tile:#f3efe4;--ink:#0b0b0c" data-tune>
+          <div class="card__screen">
+            <svg class="garment" viewBox="0 0 200 220" aria-hidden="true">
+              <path class="g-fill" d="M76 52 C70 14 130 14 124 52 L142 56 L176 74 L194 180 L170 186 L154 106 L152 206 L48 206 L46 106 L30 186 L6 180 L24 74 L58 56 Z"/>
+              <path class="g-line" d="M76 52 C84 70 116 70 124 52"/>
+              <path class="g-line" d="M92 64 L90 100 M108 64 L110 100"/>
+              <path class="g-line" d="M70 150 L130 150 L140 188 L60 188 Z"/>
+              <rect class="g-redact" x="16" y="120" width="22" height="40" transform="rotate(10 27 140)"/>
+            </svg>
+            <span class="card__osd card__osd--tl" aria-hidden="true">CH 04</span>
+            <span class="card__osd card__osd--tr" aria-hidden="true"><span class="sig-word">SIGNAL </span><i class="meter"></i></span>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__name">Hoodie <span class="card__no">02</span></h3>
+            <p class="card__price">Price on drop day</p>
+          </div>
+        </li>
+
+        <li class="card reveal" style="--tile:#141416;--ink:#8f8f96" data-tune>
+          <div class="card__screen">
+            <svg class="garment" viewBox="0 0 200 220" aria-hidden="true">
+              <path class="g-fill" d="M56 14 L144 14 L150 40 L164 208 L112 208 L100 74 L88 208 L36 208 L50 40 Z"/>
+              <path class="g-line" d="M53 28 L147 28"/>
+              <path class="g-line" d="M40 104 L66 104 L66 146 L40 146 Z M134 104 L160 104 L160 146 L134 146 Z"/>
+              <path class="g-line" d="M40 116 L66 116 M134 116 L160 116"/>
+            </svg>
+            <span class="card__osd card__osd--tl" aria-hidden="true">CH 05</span>
+            <span class="card__osd card__osd--tr" aria-hidden="true"><span class="sig-word">SIGNAL </span><i class="meter"></i></span>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__name">Cargo Pants</h3>
+            <p class="card__price">Price on drop day</p>
+          </div>
+        </li>
+
+        <li class="card reveal" style="--tile:#ffd60a;--ink:#141416" data-tune>
+          <div class="card__screen">
+            <svg class="garment" viewBox="0 0 200 220" aria-hidden="true">
+              <path class="g-fill" d="M38 136 C38 58 162 58 162 136 Z"/>
+              <path class="g-fill" d="M26 136 Q100 186 174 136 Q100 154 26 136 Z"/>
+              <path class="g-line" d="M100 64 L100 136 M100 64 C72 76 62 104 64 136 M100 64 C128 76 138 104 136 136"/>
+              <circle class="g-fill" cx="100" cy="64" r="6"/>
+              <rect class="g-redact" x="78" y="96" width="44" height="22"/>
+            </svg>
+            <span class="card__osd card__osd--tl" aria-hidden="true">CH 06</span>
+            <span class="card__osd card__osd--tr" aria-hidden="true"><span class="sig-word">SIGNAL </span><i class="meter"></i></span>
+          </div>
+          <div class="card__meta">
+            <h3 class="card__name">Cap</h3>
+            <p class="card__price">Price on drop day</p>
+          </div>
+        </li>
+      </ul>
+
+      <p class="range reveal">Whole drop: <strong>₹1,499 → ₹3,999</strong></p>
+    </section>
+
+    <!-- ===== Name / manifesto ===== -->
+    <section class="road" aria-labelledby="road-title">
+      <div class="road__lanes" aria-hidden="true"></div>
+      <div class="road__inner">
+      <h2 id="road-title" class="road__title reveal">
+        <span lang="hi" class="road__hi">खाली सड़क</span>
+        <span class="road__en">= empty road.</span>
+      </h2>
+      <p class="road__copy reveal">A small label out of Mumbai. Everything is made in India, in small batches —
+        which means there isn’t a lot of any one piece. The alert is how you get there on time.</p>
+      </div>
+    </section>
+
+    <!-- ===== Facts ===== -->
+    <section class="facts" id="facts" aria-labelledby="facts-title">
+      <div class="section-head">
+        <p class="eyebrow">Drop info</p>
+        <h2 id="facts-title" class="h2 reveal">Save the date.<br><span class="outline">Then save it again.</span></h2>
+      </div>
+
+      <dl class="facts__grid">
+        <div class="fact reveal"><dt>When</dt><dd>16.01.2027</dd></div>
+        <div class="fact reveal"><dt>Time</dt><dd>8 PM <small>IST</small></dd></div>
+        <div class="fact reveal"><dt>Where</dt><dd>This website</dd></div>
+        <div class="fact reveal"><dt>Pieces</dt><dd>06</dd></div>
+        <div class="fact reveal"><dt>Price</dt><dd><span class="nowrap">₹1,499 –</span> <span class="nowrap">₹3,999</span></dd></div>
+        <div class="fact reveal"><dt>Made</dt><dd>In India <small class="sub">Small batches</small></dd></div>
+      </dl>
+
+      <div class="cal reveal">
+        <a class="btn btn--ghost" data-gcal href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=KHALI%20SADAK%20%E2%80%94%20Monsoon%20Static%20drop&amp;dates=20270116T143000Z/20270116T153000Z&amp;details=6%20pieces%2C%20small%20batch.%20Live%20on%20the%20KHALI%20SADAK%20website%20at%208%20PM%20IST.%20Instagram%3A%20%40khalisadak.studio&amp;location=KHALI%20SADAK%20website" target="_blank" rel="noopener">+ Google Calendar<span class="sr-only"> (opens in a new tab)</span></a>
+        <button class="btn btn--ghost" type="button" data-ics>+ Apple / Outlook (.ics)</button>
+      </div>
+    </section>
+
+    <!-- ===== Alerts (main CTA) ===== -->
+    <section class="alerts" id="alerts" aria-labelledby="alerts-title" tabindex="-1">
+      <div class="alerts__sticker" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+          <text><textPath href="#circ" textLength="462" lengthAdjust="spacing">SMALL BATCH ✶ MADE IN INDIA ✶ SMALL BATCH ✶ MADE IN INDIA ✶</textPath></text>
+          <text class="alerts__sticker-mid" x="100" y="112" text-anchor="middle">16.01</text>
+        </svg>
+      </div>
+
+      <h2 id="alerts-title" class="alerts__title reveal">Don’t miss<br>the signal.</h2>
+      <p class="alerts__copy reveal">Drop your email. We’ll hit you up when Monsoon Static goes live — <span class="nowrap">16.01.27, 8 PM IST.</span></p>
+
+      <form class="signup signup--big reveal" data-signup novalidate>
+        <label class="signup__label" for="email-main">Your email</label>
+        <div class="signup__row">
+          <input id="email-main" class="signup__input" type="email" name="email" inputmode="email"
+                 autocomplete="email" placeholder="your@email.com" required
+                 aria-describedby="email-main-help email-main-status">
+          <button class="btn btn--dark signup__btn" type="submit">Alert me <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="signup__help" id="email-main-help">Drop alerts only. No spam, unsubscribe anytime. By signing up you agree to get emails from KHALI SADAK.</p>
+        <p class="signup__status" id="email-main-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <a class="footer__ig" href="https://www.instagram.com/khalisadak.studio/" target="_blank" rel="noopener">
+      <span class="footer__ig-lbl">Find us on Instagram</span>
+      <span class="footer__ig-handle">@khalisadak.studio <span aria-hidden="true">↗</span></span>
+      <span class="sr-only"> (opens in a new tab)</span>
+    </a>
+    <p class="footer__big" aria-hidden="true">KHALI SADAK</p>
+    <div class="footer__row">
+      <p>Mumbai · Made in India · Small batches</p>
+      <p>© <span data-year>2026</span> KHALI SADAK</p>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky CTA -->
+  <a class="sticky-cta" href="#alerts" data-sticky-cta>
+    <span>Get the drop alert</span><span class="sticky-cta__time" data-sticky-time aria-hidden="true"></span>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

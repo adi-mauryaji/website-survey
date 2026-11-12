@@ -1,0 +1,62 @@
+[
+ {
+  "brief": "01-hindi-coaching",
+  "title": "Coaching institute, Lucknow",
+  "audience": "students 16–18 and parents 40–55; Hindi, Devanagari; low-end Android, mobile data.",
+  "language": "हिन्दी (Hindi)",
+  "options": {
+   "f95ca18cf1": "s/f95ca18cf1/index.html",
+   "6a7e1d05fe": "s/6a7e1d05fe/index.html"
+  }
+ },
+ {
+  "brief": "02-senior-clinic",
+  "title": "Falls-prevention clinic for older adults, Leeds",
+  "audience": "adults 70+ (low vision, tremor, some hearing loss) and their children 40–55; UK English.",
+  "language": "English",
+  "options": {
+   "e178180995": "s/e178180995/index.html",
+   "045f68fa36": "s/045f68fa36/index.html"
+  }
+ },
+ {
+  "brief": "03-genz-streetwear",
+  "title": "Streetwear drop, Mumbai",
+  "audience": "16–24, India, mobile-first, Instagram-native; English with some Hinglish acceptable.",
+  "language": "English",
+  "options": {
+   "aff2091cd5": "s/aff2091cd5/index.html",
+   "0712f2eb69": "s/0712f2eb69/index.html"
+  }
+ },
+ {
+  "brief": "04-b2b-germany",
+  "title": "B2B finance SaaS, Berlin",
+  "audience": "finance leaders 35–60, DACH, expert in accounting, desktop at work; German.",
+  "language": "Deutsch (German)",
+  "options": {
+   "8073797161": "s/8073797161/index.html",
+   "5688e0b2ad": "s/5688e0b2ad/index.html"
+  }
+ },
+ {
+  "brief": "08-arabic-dental",
+  "title": "Family dental clinic, Cairo",
+  "audience": "parents 28–50 and their children; Egyptian Arabic readers; mostly mobile.",
+  "language": "العربية (Arabic)",
+  "options": {
+   "c7b86544df": "s/c7b86544df/index.html",
+   "a66ddf51b7": "s/a66ddf51b7/index.html"
+  }
+ },
+ {
+  "brief": "16-therapy-practice",
+  "title": "Online counselling practice",
+  "audience": "adults 22–45 with anxiety, possibly motion-sensitive and overwhelmed; English (India).",
+  "language": "English",
+  "options": {
+   "bcda55112e": "s/bcda55112e/index.html",
+   "3fa3762a44": "s/3fa3762a44/index.html"
+  }
+ }
+]
